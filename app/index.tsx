@@ -1,3 +1,4 @@
+import TodoCreator from '@/layout/TodoCreator'
 import TodoList from '@/layout/TodoList'
 import { Todo } from '@/types/todo'
 import { useState } from 'react'
@@ -19,6 +20,11 @@ export default function Index() {
     <View style={styles.container}>
       <StatusBar barStyle={'light-content'} />
       <Header totalTodos={todos.length} completedTodos={completedTodos.length} />
+      <TodoCreator
+        onAddTodo={(title) => {
+          setTodos([...todos, { id: todos.length + 1, title, isCompleted: false }])
+        }}
+      />
       <TodoList todos={todos} />
     </View>
   )

@@ -14,7 +14,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos }) => {
         data={todos}
         keyExtractor={(todo) => todo.id.toString()}
         renderItem={({ item }) => <TodoItem {...item} />}
-      ></FlatList>
+      />
     </View>
   )
 }
