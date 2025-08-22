@@ -1,0 +1,5 @@
+export const COLORS = {
+  PRIMARY_BCKG: '#131519',
+  PRIMATY_TEXT: '#FFF',
+  SECONDARY_BCKG: '#1f1f21'
+}
