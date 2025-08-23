@@ -1,7 +1,9 @@
-import StyledText from '@/components/StyledText'
-import { COLORS } from '@/constant/ui'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
+
+import StyledText from '@/components/StyledText'
+import { COLORS } from '@/constant/ui'
+import { formatDate } from '@/helpers/date'
 
 type HeaderProps = {
   totalTodos: number
@@ -9,11 +11,12 @@ type HeaderProps = {
 }
 
 const Header: React.FC<HeaderProps> = ({ totalTodos, completedTodos }) => {
+  const formattedDate = formatDate(new Date())
   return (
     <View style={styles.continer}>
       <View style={styles.contentWrapper}>
-        <StyledText>Header</StyledText>
-        <StyledText>22 August 2025</StyledText>
+        <StyledText variant={'title'}>ToDo app</StyledText>
+        <StyledText variant="subtitle">{formattedDate}</StyledText>
       </View>
       <StyledText>
         Completed: {completedTodos}/{totalTodos}

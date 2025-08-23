@@ -1,8 +1,9 @@
+import React, { useEffect, useState } from 'react'
+import { StyleSheet, View } from 'react-native'
+
 import StyledButton from '@/components/StyledButton'
 import StyledTextInput from '@/components/StyledInput'
 import { Todo } from '@/types/todo'
-import React, { useEffect, useState } from 'react'
-import { StyleSheet, View } from 'react-native'
 
 type TodoCreatorProps = {
   onAddTodo: (title: Todo['title']) => void
@@ -38,7 +39,7 @@ const TodoCreator: React.FC<TodoCreatorProps> = ({ onAddTodo }) => {
         }}
         isError={inputError}
       />
-      <StyledButton label="+" onPress={onPressAdd} />
+      <StyledButton label="+" onPress={onPressAdd} disabled={inputError} size="large" />
     </View>
   )
 }

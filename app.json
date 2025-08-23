@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a04526ca-15d0-48f6-af08-3651a9415af3"
+      }
+    },
+    "owner": "i.gang"
   }
 }
